@@ -17,7 +17,7 @@ public class MyBaseAdapter extends BaseAdapter {
 
     public MyBaseAdapter(Context context, ArrayList<LangModel> langModelArrayList) {
 
-        this.context = context;
+        this.context =context;
         this.langModelArrayList = langModelArrayList;
     }
 
@@ -42,12 +42,17 @@ public class MyBaseAdapter extends BaseAdapter {
         LayoutInflater layoutInflater = (LayoutInflater)
                 context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        if (convertView == null) {
+        if (convertView == null){
 
-            convertView = layoutInflater.inflate(R.layout.raw, null);
+            convertView =  layoutInflater.inflate(R.layout.raw,null);
         }
 
-        ImageView imgData = (ImageView) convertView.findViewById(R.id.img_data);
+
+        TextView tvData = (TextView)convertView.findViewById(R.id.textView2);
+        ImageView imgData = (ImageView)convertView.findViewById(R.id.img_data);
+
+        tvData.setText(langModelArrayList.get(position).getStrLang());
+
         imgData.setImageResource(langModelArrayList.get(position).getImgLang());
 
 

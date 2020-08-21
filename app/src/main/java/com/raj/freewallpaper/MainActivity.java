@@ -22,17 +22,17 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.mountains
     };
 
-    int[] strData = {
-            R.string.beach,
-            R.string.bikes,
-            R.string.cars,
-            R.string.minimalist,
-            R.string.setup,
-            R.string.studio,
-            R.string.sunset,
-            R.string.space,
-            R.string.ab,
-            R.string.mountains,
+    String[] strData = {
+           "beach" ,
+            "bikes" ,
+            "cars",
+            "minimalist",
+            "setup",
+            "studio",
+            "sunset" ,
+            "space",
+            "ab",
+            "mountains"
     };
 
     @Override
@@ -42,9 +42,12 @@ public class MainActivity extends AppCompatActivity {
 
         gridView= (GridView) findViewById(R.id.grdview);
         langModelArrayList = new ArrayList<LangModel>();
-        for (int imgDatum : imgData) {
-            LangModel langModel = new LangModel(imgDatum);
+        for (int i = 0; i < strData.length; i++) {
+
+            LangModel langModel = new LangModel(strData[i], imgData[i]);
+
             langModelArrayList.add(langModel);
+
         }
 
         MyBaseAdapter myBaseAdapter = new MyBaseAdapter(this, langModelArrayList);
