@@ -11,71 +11,36 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="cursive"
-        android:text="Wallpapers"
+        android:fontFamily="@font/cairo_light"
+        android:text="@string/wallpapers"
         android:textColor="#FFFFFF"
-        android:textSize="30dp"
-        android:textStyle="bold|italic"
+        android:textSize="30sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edt1"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/frame"
-        android:ems="10"
-        android:hint="Search Wallpaper"
-        android:inputType="textPersonName"
-        android:paddingStart="20dp"
-        android:textColorHint="#57FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toTopOf="@+id/edt1"
-        app:layout_constraintEnd_toStartOf="@+id/edt1"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toEndOf="@+id/edt1"
-        app:layout_constraintTop_toBottomOf="@+id/edt1"
-        app:layout_constraintVertical_bias="0.507"
-        app:srcCompat="@drawable/ic_search_black_24dp" />
-
     <LinearLayout
         android:id="@+id/l1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt1">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <GridView
             android:id="@+id/grdview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
             android:background="#00000000"
             android:cacheColorHint="#FFFFFF"
             android:gravity="center"
             android:horizontalSpacing="5dp"
             android:isScrollContainer="true"
-            android:numColumns="auto_fit"
+            android:numColumns="1"
             android:stretchMode="columnWidth"
             android:verticalSpacing="5dp" />
     </LinearLayout>
