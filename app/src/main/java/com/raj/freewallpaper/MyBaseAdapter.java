@@ -43,7 +43,6 @@ public class MyBaseAdapter extends BaseAdapter {
                 context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if (convertView == null){
-
             convertView =  layoutInflater.inflate(R.layout.raw,null);
         }
 
